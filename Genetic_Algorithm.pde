@@ -6,11 +6,14 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-int scope = 64;
+int hashSize = 64;
+int litterSize = 5;
+int populationSize = 10000;
 
 PFont mono;
 int gen = 1;
-int litterSize = 5;
+
+
 
 ArrayList<pt> points = new ArrayList<pt>();
 
@@ -22,7 +25,7 @@ void setup() {
   fullScreen();
   mono = createFont("helvetica.tcc", 12);
   goal = new Agent(80, height-200, true);
-  for (int i = 0; i < 10000; i++) {
+  for (int i = 0; i < populationSize; i++) {
     population.add(new Agent(0, 0));
   }
 }

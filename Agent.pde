@@ -2,7 +2,7 @@ class Agent {
   String seed;
   int xOffset, yOffset;
   boolean isGoal = false;
-  int strLen = scope;
+  int strLen = hashSize;
 
   Agent(int x, int y) {
     xOffset = x;
